@@ -1,4 +1,3 @@
-
 Given(/^I am a student$/) do
   @student = Student.new #setting as an instance variable to access later on
   @teacher = Teacher.new
