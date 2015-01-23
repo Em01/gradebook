@@ -1,6 +1,6 @@
 
 Given(/^I am a student$/) do
-  pending # express the regexp above with the code you wish you had
+  @student = Student.new #setting as an instance variable to access later on
 end
 
 When(/^I submit an assignment to my teacher$/) do
