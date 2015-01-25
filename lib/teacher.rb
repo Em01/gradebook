@@ -4,12 +4,10 @@ class Teacher
 	end
 
 	def record_grade(assignment, grade)
+		assignment = @assignments[student] #assignment equal to assignments of the student
+		assignment.grade = grade 
+		@assignments[student] = assignment
 	end 
-
-	def find_assignment(assignment)
-		key = @assignments.select{|k,v| v == assignment}.first.first
-		@assignments[key]
-	end
 
 	def submit_assignment(student, assignment)
 		@assignments[student] = assignment
