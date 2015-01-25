@@ -5,9 +5,9 @@ end
 
 When(/^I submit an assignment to my teacher$/) do
 	@assignment = Assignment.new
-	@student.submit_assignment(@teacher, @assignment)
+	@teacher.submit_assignment(@student, @assignment)
 end
 
 Then(/^my teacher should have my assignment$/) do
-	expect(@teacher.assignment_for_student(@student)).to eq(@assingment)
+	expect(@teacher.assignment_for_student(@student)).to eq(@assignment)
 end
