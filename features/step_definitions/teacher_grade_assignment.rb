@@ -1,17 +1,16 @@
 Given(/^I have a student$/) do
 	@teacher = Teacher.new
 	@student = Student.new
-	@assignment = Assignment.new
 end
 
 Given(/^They submitted an assignment$/) do
-  @teacher.submit_assignment(@student, @assignment)
+  @teacher.submit_assignment(@student, Assignment.new)
 end
 
 When(/^I grade the assignment$/) do
-  @teacher.record_grade(@assignment, 95)
+  @teacher.record_grade(@student, 95)
 end
 
 Then(/^the assignment has a grade$/) do
-  pending # express the regexp above with the code you wish you had
+	expect(@teacher.assignment_for_student(@student)).to eq(95)
 end
