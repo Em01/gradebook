@@ -3,6 +3,9 @@ class Teacher
 		@assignments = {}
 	end
 
+	def record_grade(assignment, grade)
+	end
+
 	def submit_assignment(student, assignment)
 		@assignments[student] = assignment
 	end
