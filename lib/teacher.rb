@@ -3,7 +3,7 @@ class Teacher
 		@assignments = {}
 	end
 
-	def record_grade(assignment, grade)
+	def record_grade(student, grade)
 		assignment = @assignments[student] #assignment equal to assignments of the student
 		assignment.grade = grade 
 		@assignments[student] = assignment
