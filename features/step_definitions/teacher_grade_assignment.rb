@@ -9,7 +9,7 @@ Given(/^They submitted an assignment$/) do
 end
 
 When(/^I grade the assignment$/) do
-  pending # express the regexp above with the code you wish you had
+  @teacher.record_grade(@assignment, 95)
 end
 
 Then(/^the assignment has a grade$/) do
