@@ -7,5 +7,5 @@ Feature: Teacher can grade assignment
 	Scenario: Teacher can grade assignment
 		Given I have a student
 		And They submitted an assignment
-		When They submitted an assignment
+		When I grade the assignment
 		Then the assignment has a grade
