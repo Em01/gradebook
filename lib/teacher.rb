@@ -1,3 +1,4 @@
+
 class Teacher 
 	def initialize
 		@assignments = {}

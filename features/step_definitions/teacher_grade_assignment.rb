@@ -12,5 +12,5 @@ When(/^I grade the assignment$/) do
 end
 
 Then(/^the assignment has a grade$/) do
-	expect(@teacher.assignment_for_student(@student)).to eq(95)
+	expect(@teacher.assignment_for_student(@student).grade).to eq(95)
 end
